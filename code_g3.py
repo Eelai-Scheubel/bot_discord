@@ -8,8 +8,8 @@ jobs = scrape_jobs(
     results_wanted=200,					#nombre de résultats voulus
     hours_old=72,						#temps maximum depuis la publication (en heures)
     country_indeed='France',			#pays pour indeed 
-   
 )
+
 print(f"Found {len(jobs)} jobs")
 print(jobs.head())						#verification des resultats
 jobs.to_csv("jobs.csv", quoting=csv.QUOTE_NONNUMERIC, escapechar="\\", index=False) #enregistrement au format csv
